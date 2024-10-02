@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +29,28 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-zinc-500 px-4 py-2 rounded-md;
+    @apply hover:bg-zinc-700;
+  }
+
+  .btn-info {
+    @apply btn;
+    @apply bg-green-500 hover:bg-green-700;
+  }
+
+  .btn-danger {
+    @apply btn;
+    @apply bg-red-500 hover:bg-red-700;
+  }
+
+  .input {
+    @apply bg-black bg-opacity-20 px-4 py-2 rounded-md;
+    @apply focus:outline-none;
+    @apply focus:ring-2 focus:ring-opacity-30 focus:ring-white;
   }
 }
